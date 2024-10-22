@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import rightArrow from "../../media/icons/arrow-right.png";
+import PortfoliosBg from "../../media/images/bg-light-left.png";
 
 const Portfolios = () => {
   const portfolioData = [
@@ -50,6 +51,24 @@ const Portfolios = () => {
         {portfolioData.map((card, index) => (
           <div className="portfolio-card" key={index}>
             <img src={card.cardImage} alt={`${card.title} image`} />
+            {index === 5 && (
+              <div
+                style={{
+                  background: "#38d66058",
+                  position: "absolute",
+                  top: 0,
+                  width: "100%",
+                  padding: "0",
+                  borderRadius: "10px",
+                }}
+              >
+                <img
+                  style={{ opacity: 0 }}
+                  src={card.cardImage}
+                  alt={`${card.title} image`}
+                />
+              </div>
+            )}
             <div>
               <h6>{card.title}</h6>
               <p>{card.subTitle}</p>
@@ -57,6 +76,7 @@ const Portfolios = () => {
           </div>
         ))}
       </div>
+      <Image className="Portfolios-Bg" src={PortfoliosBg} alt="" />
     </div>
   );
 };

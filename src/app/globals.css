@@ -27,6 +27,50 @@ a {
     color-scheme: dark;
   }
 }
+/* image use as bg  */
+.headerImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.banner-image-bg {
+  position: absolute;
+  z-index: -1;
+  right: 0px;
+  top: 0;
+}
+
+.aboutMe-bg {
+  position: absolute;
+  z-index: -1;
+  right: 0px;
+  top: 55%;
+}
+
+.Portfolios-Bg {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 150%;
+}
+
+.experience-bg {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 230%;
+}
+
+.lets-bg {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 350%;
+}
+
+/* //////// */
 
 .custom-button {
   background-color: #0096fb;
@@ -37,10 +81,196 @@ a {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  text-wrap: nowrap;
 }
 
 .custom-button:hover {
-  background-color: #007bbd; /* Optional hover effect */
+  background-color: #007bbd;
+}
+
+/* Header section  */
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1220px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 35px 20px 35px;
+}
+
+.header-div .header-links {
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  gap: 40px;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.header-button {
+  display: block;
+}
+
+/* Banner section  */
+
+.banner-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  padding: 0 20px 0;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 515px;
+  height: auto;
+}
+
+.outer-gradient {
+  display: inline-block;
+  background: linear-gradient(to right, #0099ff, white);
+  padding: 1px;
+  margin-bottom: 20px;
+  border-radius: 9999px;
+}
+
+.inner-text {
+  background-color: #000811;
+  padding: 4px 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -2%;
+  border-radius: 9999px;
+}
+
+.banner-sub-header {
+  font-size: 35px;
+  font-weight: 500;
+  color: #0099ff;
+  margin-bottom: 30px;
+}
+
+.banner-info {
+  display: flex;
+  gap: 20px;
+}
+
+/* clients logo  */
+
+.client-header {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #000811);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #000811);
+}
+
+.logo_items {
+  display: inline-block;
+  animation: 80s slides infinite linear;
+}
+
+.logos:hover .logo_items {
+  animation-play-state: paused;
+}
+
+.logo_items img {
+  height: auto;
+  margin-inline: 50px;
+}
+
+/* About Me section*/
+.about-me-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1060px;
+  margin-inline: auto;
+  padding-right: 50px;
+  padding-left: 10px;
+  margin-bottom: 150px;
+}
+
+.about-me-div img {
+  width: 100%;
+  max-width: 410px;
+  height: auto;
+}
+
+.about-hero-info {
+  width: 100%;
+  max-width: 500px;
+}
+
+.about-discrp {
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.sub-header {
+  font-size: 28px;
+  font-weight: 500;
+  color: #0099ff;
+}
+
+.about-project {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.about-project div {
+  max-width: 100px;
+}
+
+.about-project div p {
+  font-size: 16px;
+  line-height: 21px;
 }
 
 /* Portfolio section*/
@@ -95,6 +325,7 @@ a {
 
 .portfolio-card {
   border-radius: 10px;
+  position: relative;
 }
 
 .portfolio-card img {
@@ -148,7 +379,7 @@ a {
   margin-right: auto;
   gap: 25px;
   margin-top: 80px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .service-card {
@@ -159,6 +390,7 @@ a {
   border-radius: 20px;
   padding: 40px 24px 35px 24px;
 }
+
 .service-card h1 {
   margin-top: 10px;
   font-size: 24px;
@@ -203,10 +435,11 @@ a {
   font-size: 14px;
 }
 
-.lets-talk-div div img {
-  max-width: 100%;
+.person-image {
+  max-width: 409px;
+  width: 100%;
+  height: auto;
 }
-
 /* footer section */
 
 .footer-main-dev {
@@ -258,14 +491,6 @@ a {
   border-top: 1px solid #ffffff99;
 }
 
-.footer-bottom {
-  padding: 18px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: 1px solid #ffffff99;
-}
-
 .footer-bottom div {
   display: flex;
   align-items: center;
@@ -282,7 +507,17 @@ a {
 
 /* media query  */
 
+@media screen and (max-width: 960px) {
+  .banner-image {
+    max-width: 480px;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  .banner-div {
+    flex-direction: column;
+  }
+
   .portfolio-container {
     margin-bottom: 150px;
   }
@@ -311,8 +546,76 @@ a {
   .footer-main-dev {
     padding: 60px 80px 0;
   }
+
+  .lets-bg {
+    top: 430%;
+  }
+  .experience-bg {
+    height: 60%;
+    width: auto;
+    top: 550%;
+  }
 }
 
+@media screen and (max-width: 950px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .header-button {
+    display: none;
+  }
+  .header-div .header-links {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .logo_items img {
+    height: 15px;
+    width: auto;
+    margin-inline: 30px;
+  }
+  .client-header {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .about-me-div {
+    padding: 35px;
+    flex-direction: column;
+  }
+
+  .about-hero-info {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .aboutMe-bg {
+    top: 150%;
+    height: 80%;
+    width: auto;
+  }
+
+  .banner-image-bg {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: 30%;
+    width: 60%;
+    height: auto;
+  }
+  .Portfolios-Bg {
+    top: 390%;
+    height: 60%;
+    width: auto;
+  }
+  .lets-bg {
+    top: 660%;
+    height: 50%;
+    width: auto;
+  }
+}
 @media screen and (max-width: 660px) {
   .headerText {
     font-size: 32px;
@@ -343,5 +646,28 @@ a {
 
   .footer-main-dev {
     padding: 60px 40px 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headerImg {
+    max-width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .banner-info {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: start;
   }
 }
