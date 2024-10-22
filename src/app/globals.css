@@ -1,5 +1,5 @@
 html body {
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", sans-serif !important;
   background: #000811;
 }
 
@@ -28,13 +28,27 @@ a {
   }
 }
 
-/* Portfolio */
+.custom-button {
+  background-color: #0096fb;
+  padding: 12px 32px;
+  border-radius: 12px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
 
+.custom-button:hover {
+  background-color: #007bbd; /* Optional hover effect */
+}
+
+/* Portfolio section*/
 .portfolio-container {
   max-width: 1100px;
   padding-inline: 50px;
   margin-inline: auto;
-  margin-bottom: 180px;
+  margin-bottom: 200px;
 }
 
 .headerText {
@@ -94,17 +108,218 @@ a {
   border-bottom-right-radius: 10px;
 }
 
+/* Experience section */
+
+.experience-images-div {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 916px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 32px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+/* services section  */
+.services-description {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 477px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 15px;
+}
+
+.services-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  padding-inline: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 25px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  max-width: 409px;
+  width: 100%;
+  margin-inline: auto;
+  background: #000e1f;
+  border-radius: 20px;
+  padding: 40px 24px 35px 24px;
+}
+.service-card h1 {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.service-card .service-img {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+
+.service-points-div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.service-points-div p {
+  font-size: 12px;
+}
+
+/* let's talk section*/
+.lets-talk-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  padding-inline: 25px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.lets-talk-div div {
+  max-width: 400px;
+}
+
+.lets-talk-div div p {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.lets-talk-div div img {
+  max-width: 100%;
+}
+
+/* footer section */
+
+.footer-main-dev {
+  background: #000e1f;
+  margin-inline: auto;
+  max-width: 1344px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 80px 100px 0;
+}
+
+.footer-top {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: 80px;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.footer-contract h6 {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer-contract div div {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-contract div .title {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.footer-contract div .info {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff99;
+}
+
+.footer-bottom {
+  padding: 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff99;
+}
+
+.footer-bottom div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+/* media query  */
+
 @media screen and (max-width: 900px) {
+  .portfolio-container {
+    margin-bottom: 150px;
+  }
+
   .portfolio-cards-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .headerText {
     font-size: 42px;
   }
+
+  .experience-images-div {
+    gap: 70px;
+  }
+
+  .lets-talk-div {
+    gap: 50px;
+    flex-direction: column;
+  }
+
+  .lets-talk-div div {
+    max-width: 100%;
+  }
+
+  .footer-main-dev {
+    padding: 60px 80px 0;
+  }
 }
+
 @media screen and (max-width: 660px) {
   .headerText {
     font-size: 32px;
+  }
+
+  .portfolio-container {
+    margin-bottom: 100px;
   }
 
   .portfolio-header div p {
@@ -113,5 +328,20 @@ a {
 
   .portfolio-cards-container {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .experience-images-div {
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  .experience-images-div img {
+    width: auto;
+    height: 39px;
+  }
+
+  .footer-main-dev {
+    padding: 60px 40px 0;
   }
 }
